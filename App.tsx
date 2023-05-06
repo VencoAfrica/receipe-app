@@ -1,21 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import Navigation from "./src/navigation";
+import "react-native-gesture-handler";
+import FlashMessage from "react-native-flash-message";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { hp } from "./src/shared/responsive-dimension";
+import { Provider } from "react-redux";
+import store from "./src/redux/store";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Welcome VENCO React Native Hackathon</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <SafeAreaProvider>
+        <FlashMessage
+          position="top"
+          style={styles.flashTextStyle}
+          duration={4500}
+          titleStyle={styles.titleStyle}
+        />
+        <Navigation />
+      </SafeAreaProvider>
+    </Provider>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  titleStyle: {
+    textAlign: "center",
+    color: "#fff",
+
+    fontSize: 14,
+  },
+  flashTextStyle: {
+    paddingTop: hp(20),
+    zIndex: 10000,
   },
 });
 
