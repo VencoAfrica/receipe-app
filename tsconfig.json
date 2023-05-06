@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true
   }
+=======
+  "compilerOptions": {},
+  "extends": "expo/tsconfig.base"
+>>>>>>> b2c68a8 (Update)
 }
