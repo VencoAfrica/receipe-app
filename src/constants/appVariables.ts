@@ -1,0 +1,9 @@
+const AUTH_TOKEN = '@RECIPE_AUTH_TOKEN';
+const USER_OBJ = '@RECIPE_USER_OBJ';
+const REFRESH_TOKEN = '@RECIPE_REFRESH_TOKEN';
+
+export const StorageKeys = {
+  AUTH_TOKEN,
+  USER_OBJ,
+  REFRESH_TOKEN,
+};
