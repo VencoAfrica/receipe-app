@@ -8,6 +8,7 @@ import { showMessage } from "react-native-flash-message";
 const IsState: any = {
   receipes: [],
   loading: false,
+  savedReceipes: [],
 };
 
 export const Receipe = {
@@ -82,6 +83,11 @@ export const Receipe = {
           receipes: receipes,
         });
       }
+    },
+    async saveReceipe(receipe: any) {
+      dispatch.Receipe.setState({
+        // savedReceipes: newRecipe,
+      });
     },
     async handleError(error: any) {
       dispatch.Receipe.setError(true);
