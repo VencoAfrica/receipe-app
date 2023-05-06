@@ -1,12 +1,21 @@
+import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import ReceipeHomeNav from './src/navigation/ReceipeHomeNav'
+import { Provider } from 'react-redux';
+import { Store } from './src/redux/Store';
+import BottomTab from './src/navigation/BottomTab';
 
-export default function App() {
+export default function App(): JSX.Element {
   return (
-    <View style={styles.container}>
-      <Text>Welcome VENCO React Native Hackathon</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={Store}>
+      <NavigationContainer>
+        <BottomTab>
+          <ReceipeHomeNav/>
+        </BottomTab>
+      </NavigationContainer>
+    </Provider>
+    
   );
 }
 
