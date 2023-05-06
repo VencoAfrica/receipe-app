@@ -50,12 +50,13 @@ export default function HomeScreen (){
 
                 <Text style={{fontSize:20,color:colors.BLACK,fontWeight:'bold'}}>New Recipies</Text>
 
-                <View style={{height:50,width:'100%',shadowColor: colors.BLACK,
+                <View style={{height:70,width:'100%',shadowColor: colors.BLACK,
                 backgroundColor:colors.WHITE,
         shadowOffset: { width: 10, height: 5 },
-        shadowOpacity: 0.9,
-        shadowRadius:128/2,
-        elevation: 10,}}>
+        shadowOpacity: 0.2,
+        shadowRadius:60/2,
+        elevation: 10,
+        borderRadius:10}}>
 
                 </View>
                 
