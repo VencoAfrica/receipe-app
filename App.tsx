@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import SplashScreen from './src/recipe/nav/AuthStack/splash';
+import RegisterScreen from './src/recipe/nav/AuthStack/register';
+import LoginScreen from './src/recipe/nav/AuthStack/login';
+import HomeScreen from './src/recipe/nav/AppStack/home';
+import AppTabNavigator from './src/recipe/nav/AppStack';
+import AppScreen from './src/recipe/nav';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Welcome VENCO React Native Hackathon</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AppScreen/>
   );
 }
 
